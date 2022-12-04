@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{95D3CEE5-4B62-BFFC-E989-90B8876AE233}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "RaderChartUMG",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	]
+}
