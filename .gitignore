@@ -1,2 +1,8 @@
 RaderChartUMG/.vs/
 RaderChartUMG/Intermediate/
+RaderChartUMG/Binaries/
+RaderChartUMG/Plugins/RaderChartUMGPlugin/Binaries/
+RaderChartUMG/Plugins/RaderChartUMGPlugin/Intermediate/
+*.log
+RaderChartUMG/Saved/Config/CrashReportClient/
+RaderChartUMG/Saved/
