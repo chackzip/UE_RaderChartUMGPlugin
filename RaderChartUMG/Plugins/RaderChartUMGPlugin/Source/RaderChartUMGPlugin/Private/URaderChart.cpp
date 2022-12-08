@@ -7,6 +7,8 @@ void URaderChart::SynchronizeProperties()
 	Super::SynchronizeProperties();
 	MyRaderChart->SetBrush(&Brush);
 	MyRaderChart->SetValueArray(ValueArray);
+	MyRaderChart->SetOutlineBrush(&OutlineBrush);
+	MyRaderChart->SetOutlineWidth(OutlineWidth);
 }
 
 void URaderChart::ReleaseSlateResources(bool bReleaseChildren)
@@ -23,6 +25,14 @@ void URaderChart::SetValueArray(TArray<float>& InValueArray)
 	}
 }
 
+void URaderChart::SetOutlineWidth(float InOutlineWidth)
+{
+	OutlineWidth = InOutlineWidth;
+	if (MyRaderChart)
+	{
+		MyRaderChart->SetOutlineWidth(OutlineWidth);
+	}
+}
 
 #if WITH_EDITOR
 const FText URaderChart::GetPaletteCategory()
@@ -35,7 +45,9 @@ TSharedRef<SWidget> URaderChart::RebuildWidget()
 {
 	MyRaderChart = SNew(SRaderChart)
 		.Brush(&Brush)
-		.ValueArray(ValueArray);
+		.ValueArray(ValueArray)
+		.OutlineWidth(OutlineWidth)
+		.OutlineBrush(&OutlineBrush);
 
 	return MyRaderChart.ToSharedRef();
 }
