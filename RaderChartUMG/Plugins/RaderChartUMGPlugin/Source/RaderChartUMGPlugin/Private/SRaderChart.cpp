@@ -39,6 +39,7 @@ int32 SRaderChart::OnPaint(const FPaintArgs& Args, const FGeometry& AllottedGeom
 
 	CenterVertex.Position = FVector2f(Center.X, Center.Y);
 	CenterVertex.Color = FinalColorAndOpacity;
+	CenterVertex.SetTexCoords(FVector4f(0.5f, 0.5f, 1.0f, 1.0f));
 
 	// Add vertices
 	for (int i = 0; i < ValueArray.Num(); i++)
@@ -51,6 +52,8 @@ int32 SRaderChart::OnPaint(const FPaintArgs& Args, const FGeometry& AllottedGeom
 
 		OuterVert.Position = Center + VertPos * Radius * ValueArray[i];
 		OuterVert.Color = FinalColorAndOpacity;
+		FVector2f UV = FVector2f( (OuterVert.Position.X - Pos.X) / Size.X, (OuterVert.Position.Y - Pos.Y) / Size.Y);
+		OuterVert.SetTexCoords(FVector4f(UV.X, UV.Y, 1.0f, 1.0f));
 	}
 
 	TArray<SlateIndex> Indices;
