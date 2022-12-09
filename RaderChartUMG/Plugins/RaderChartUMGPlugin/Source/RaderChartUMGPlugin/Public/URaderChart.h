@@ -15,22 +15,22 @@ public:
 	virtual void SynchronizeProperties() override;
 	virtual void ReleaseSlateResources(bool bReleaseChildren) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Appearance")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RaderChart")
 	FSlateBrush Brush;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Appearance")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RaderChart")
 	FSlateBrush OutlineBrush;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "RaderChart")
 	TArray<float> ValueArray;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "RaderChart")
 	float OutlineWidth;
 
-	UFUNCTION(BlueprintCallable, Category = "Appearance")
+	UFUNCTION(BlueprintCallable, Category = "RaderChart")
 	void SetValueArray(TArray<float>& InValueArray);
 
-	UFUNCTION(BlueprintCallable, Category = "Appearance")
+	UFUNCTION(BlueprintCallable, Category = "RaderChart")
 	void SetOutlineWidth(float InOutlineWidth);
 
 

@@ -19,9 +19,6 @@ public:
 	FSlateWindowElementList& OutDrawElements, int32 LayerId, const FWidgetStyle& InWidgetStyle,
 	bool bParentEnabled) const override;
 
-	void DrawChart(FColor& InColor, FSlateBrush* InBrush, TArray<FSlateVertex>& Vertices, FVector2f InCenter, float InRadius, float InDeg, FSlateWindowElementList& InOutDrawElements, int32 InLayerId);
-	void DrawOutline(FColor& InColor, FSlateBrush* InBrush, TArray<FSlateVertex>& InVertices, FSlateWindowElementList& InOutDrawElements, int32 InLayerId);
-
 	void SetValueArray(TArray<float>& InValueArray);
 	void SetOutlineWidth(float InOutlineWidth);
 	void SetBrush(FSlateBrush* InBrush);
